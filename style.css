@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    display: grid;
+    grid-template-rows: 0.3fr 2fr;
+    background-color: rgb(184, 106, 28);
+    width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.header{
+    grid-row: 1/2;
+    /* height: 30%; */
+    background-color: aquamarine;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
+
+.container{
+    grid-row: 2/3;
+    background-color: burlywood;
+    display: grid;
+    grid-template-rows: 0.3fr 2fr;
+}
+
+#add-book-button{
+    background-color: rgb(210, 72, 245);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-books{
+    background-color: cornflowerblue;
+}
+
+.popup-form{
+    
+    background-color: rgba(0,0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.form-contents{
+    height: 15em;
+    width: 18em;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.form-contents div{
+    margin-top: 15px;
+}
+
+#cross{
+    position: absolute;
+    top: 0;
+    right: 2em;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
