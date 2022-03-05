@@ -6,6 +6,13 @@ let author = document.getElementById("author");
 let pages = document.getElementById("pages");
 let read = document.getElementById("read");
 let saveButton = document.getElementById("save-button");
+// let showBooks = document.querySelector(".show-books");
+let showBooks = document.getElementById("show-books");
+// let name = document.getElementById("name");
+
+
+
+let myLibrary = [];
 
 // close pop-up from
 close.addEventListener("click",()=>{
@@ -14,19 +21,36 @@ close.addEventListener("click",()=>{
 
 //open pop-up form
 addBookButton.addEventListener("click", ()=>{
-  popupForm.style.display = "flex";
+  // popupForm.style.display = "flex";
+  addBookToLibrary();
 })
 
 //get value from form
 saveButton.addEventListener("click", ()=>{
-  console.log(bookName.value);
-  console.log(author.value);
-  console.log(pages.value);
+//  Book();
 })
 
+//function to makes array out of user input
+let makeArray =()=>{
+  myLibrary.push(bookName.value,author.value,pages.value);
+  let title = myLibrary[0];
+  return title;
+  // Book(title);
+  // console.log(title);
+}
 
+// function Book() {
+//   makeArray(title);
+//   // the constructor...
+//   this.title = makeArray(title);
+//   // this.author = author;
+//   // this.pages = pages;
+//   // this.read = read;
+//   this.info = function(){
+//   console.log(title);
+// }
+// }
 
-let myLibrary = [];
 
 function Book(title,author,pages,read) {
   // the constructor...
@@ -35,13 +59,32 @@ function Book(title,author,pages,read) {
   this.pages = pages;
   this.read = read;
   this.info = function(){
-  return `${title} by ${author}, ${pages} pages, ${read}.`;
+  return title, author, pages, read;
 }
 }
-
+const book1 = new Book("The Hobbit", "J.R.R. Tolkien", "295", "not read yet");
 function addBookToLibrary() {
   // do stuff here
+  let card = document.createElement("div");
+  showBooks.appendChild(card);
+  card.style.height = "250px";
+  card.style.width = "250px";
+  card.style.borderRadius = "10px";
+  card.style.backgroundColor = "white";
+  card.style.color = "black";
+  // card.style.display = "grid";
+  Book();
+  myLibrary.push(book1);
+  // console.log(myLibrary)
 }
 
-const book1 = new Book("The Hobbit", "J.R.R. Tolkien", "295", "not read yet");
-book1.info();
+
+// for(let info in Book) alert(info);
+
+// console.log(typeof(book1));
+// console.log(book1.length)
+// for(let i=0; i<myLibrary.length; i++){
+//   console.log("wee");
+// }
+
+
