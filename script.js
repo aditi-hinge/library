@@ -19,7 +19,9 @@ addBookButton.addEventListener("click", ()=>{
 
 //get value from form
 saveButton.addEventListener("click", ()=>{
-  console.log(bookName.value + author.value + pages.value + read.value);
+  console.log(bookName.value);
+  console.log(author.value);
+  console.log(pages.value);
 })
 
 
