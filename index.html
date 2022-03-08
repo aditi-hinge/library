@@ -13,17 +13,16 @@
         <div class="container">
             <div id="add-book-button-div"><button id="add-book-button">+Add Book</button></div>
             <div id="show-books"></div>
-            <!-- <div></div> -->
         </div>
         <div class="popup-form">
             <div class="form-contents">
-                <form action="" method="get">
+                <form id="form">
                     <div>
                         <div id="cross">+</div>
                         <div>New Book</div>
                         <!-- book-->
                         <label for="book-name">Book:</label>
-                        <input type="text" id="book-name" required>
+                        <input type="text" id="book-name" minlength="1" maxlength="15" required />
                     </div>
                     <div>
                         <!-- author -->
@@ -42,14 +41,13 @@
                     </div>                   
                     <div>
                         <!-- save button -->
-                        <button type="button" id="save-button">SAVE</button>
+                        <button type="submit" id="save-button">SAVE</button>
                     </div>
                 </form>
             </div>
             
         </div>
     </main>
-    <!-- <div>dhjghjdsgh</div> -->
     <script src="./script.js"></script>
 </body>
 </html>
