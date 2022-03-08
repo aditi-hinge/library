@@ -85,3 +85,12 @@ main{
     /* font-weight 900; */
     cursor: pointer;
 }
+
+.card{
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
